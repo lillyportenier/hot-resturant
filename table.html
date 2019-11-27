@@ -7,37 +7,73 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
         integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
-    <title>Hot Resturant</title>
+    <title>Table View</title>
 </head>
 
 <body>
-    <style> 
+    <style>
         body {
             margin-right: 50px;
             margin-left: 50px;
         }
-        .jumbotron{
+
+        .jumbotron {
             font-weight: bold;
             text-align: center;
         }
+
         .jumbotron h2 {
             margin-bottom: 25px;
         }
+
         .red-button {
             background-color: rgba(189, 0, 0, 0.776);
         }
     </style>
+    <div class=container>
+        <div class="jumbotron">
+            <h1 class="display-4"><strong>Hot Resturant</strong></h1>
+            <hr class="my-4">
+            <h2>Current Reservations and Waiting List</h2>
+            <a class="btn btn-primary btn-lg red-button" href="#" role="button">Make Reservation</a>
+            <a href="#" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Home</a>
+        </div>
 
-    <div class="jumbotron">
-        <h1 class="display-4"><strong>Hot Resturant</strong></h1>
-        <hr class="my-4">
-        <h2>Current Reservations and Waiting List</h2>
-        <a class="btn btn-primary btn-lg red-button" href="#" role="button">Make Reservation</a>
-        <a href="#" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Home</a>
+        <div class="card">
+            <div class="card-header">
+                Current Reservations
+            </div>
+            <div class="card-body">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="card">
+                <div class="card-header">
+                    Waiting List
+                </div>
+                <div class="card-body">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
     </div>
+
+
+
+
+
+
     <footer>
-            <a href="./table.html" >API Table Link  | </a>
-            <a href="#" >API Wait List</a>
+        <a href="./table.html">API Table Link | </a>
+        <a href="#">API Wait List</a>
 
 
     </footer>
