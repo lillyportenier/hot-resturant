@@ -12,29 +12,24 @@ app.listen(PORT, function(){
 
 var tableReservations= [
     {
-        name: "Gypsy",
-        phone: 333-333-3333,
-        email:"cats@gmail.com",
+        name: "rick",
+        state: "NC"
     },
     {
-        name: "Gypsy",
-        phone: 333-333-3333,
-        email:"cats@gmail.com",
+        name: "matt",
+        state: "CO"
     }
-
 ];
+
 var waitingTables = [
     {
-        name: "Gypsy",
-        phone: 333-333-3333,
-        email:"cats@gmail.com",
+        name: "bob",
+        state: "NC"
     },
     {
-        name: "Gypsy",
-        phone: 333-333-3333,
-        email:"cats@gmail.com",
-    }   
-
+        name: "bobby",
+        state: "NY"
+    }
 ];
 
 app.get("/", function(req, response){
@@ -56,3 +51,29 @@ app.get("/api/tableReservations", function(req, response){
 app.get("/api/waitingTables", function(req, response){
     return response.json(waitingTables);
 });
+
+app.post("/api/reserve", function (req, res) {
+    var newReservation = req.body;
+
+    // newReservation.routeName = newReservation.name.replace(/\s+/g, "").toLowerCase();
+
+    for (var i=0; i<tableReservations.length; i++) {
+        
+        if (tableReservations.length > 5) {
+            waitingTables.push(newReservation)
+            // alert("You almost had it! You gotta be quicker than that!")
+            // console.log("Table Res: " + tableReservations.length)
+            // console.log("Good Res: " + waitingTables.length)
+            console.log("You almost had it! You gotta be quicker than that!")
+            res.json(false);
+        }
+        else {
+            tableReservations.push(newReservation);
+            // alert("You're all set! See you soon!");
+            // console.log("Table Res: " + tableReservations.length)
+            // console.log("Good Res: " + waitingTables.length)
+            console.log("You're all set! See you soon!")
+            res.json(true);
+        }
+    }
+})
