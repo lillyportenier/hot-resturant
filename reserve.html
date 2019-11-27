@@ -11,11 +11,14 @@
 </head>
 
 <body>
-    <style> 
-
-        .jumbotron{
+    <style>
+        .jumbotron {
             font-weight: bold;
             text-align: center;
+           
+        }
+
+        body {
             margin-right: 50px;
             margin-left: 50px;
         }
@@ -25,47 +28,55 @@
         <h1 class="display-4">Hot Resturant</h1>
         <hr class="my-4">
         <h2>Make your reservation!</h2>
-        <a href="www.goggle.com" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">View Tables</a>
-        <a href="www.goggle.com" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Home</a>
+        <a href="www.goggle.com" class="btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">View
+            Tables</a>
+        <a href="hot.html" class="btn btn-primary btn-lg" tabindex="-1" role="button"
+            aria-disabled="true">Home</a>
         <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Make Reservation</a> -->
     </div>
     <br>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title">Table Reservation</h4>
+    <div class="card">
+        <div class="card-header">
+            Table Reservation
         </div>
-        <div class="panel-body">
+        <div class="card-body">
+            <div class="panel panel-default">
 
-            <form role="form">
+                <div class="panel-body">
 
-                <div class="form-group">
-                    <label for="">Name</label>
-                    <input type="text" class="form-control" id="reserve_name">
+                    <form role="form">
+
+                        <div class="form-group">
+                            <label for="">Name</label>
+                            <input type="text" class="form-control" id="reserve_name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Phone Number</label>
+                            <input type="text" class="form-control" id="reserve_phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Email</label>
+                            <input type="text" class="form-control" id="reserve_email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Unique ID</label>
+                            <input type="text" class="form-control" id="reserve_uniqueID">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary submit">Submit</button>
+                         <!-- TODO make sure sumbit button sends info somewhere -->
+                    </form>
+
                 </div>
-
-                <div class="form-group">
-                    <label for="">Phone Number</label>
-                    <input type="text" class="form-control" id="reserve_phone">
-                </div>
-
-                <div class="form-group">
-                    <label for="">Email</label>
-                    <input type="text" class="form-control" id="reserve_email">
-                </div>
-
-                <div class="form-group">
-                    <label for="">Unique ID</label>
-                    <input type="text" class="form-control" id="reserve_uniqueID">
-                </div>
-
-                <button type="submit" class="btn btn-primary submit">Submit</button>
-            </form>
-
+            </div>
         </div>
     </div>
 
-</div>
-</div>
+    </div>
+    </div>
 
 
 
